@@ -1,0 +1,257 @@
+*{
+
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+:root{
+  --z-index-top-ebene: 3;
+  --z-index-middle-ebene: 2;
+  --z-index-back-ebene:1;
+}
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+    font-family: 'Roboto', sans-serif;
+    /* border: solid 3px orange; */
+    box-sizing: border-box;
+}
+
+header {
+  
+}
+/* 
+.header_element{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 2rem;
+  width: 2rem;
+  box-shadow: inset;
+  z-index: var(--z-index-top-ebene);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+} */
+
+header p{
+  height: auto;
+  width: auto;
+  font-weight: 800;
+}
+
+
+h1{
+  font-size: 3rem;
+}
+h2{
+  font-size: 2.5rem;
+}
+
+h3{
+  font-size: 2rem;
+}
+
+h4{
+  font-size: 1.5rem;
+}
+h5{
+  font-size: 1.2rem;
+}
+h6{
+  font-size: 1rem;
+}
+
+
+
+main {
+  /* position: relative; */
+  /* height: calc(100% - 6rem); */
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  transition: padding 0.5s ease, border-radius 0.5s ease;
+  border-radius: 0;
+}
+
+main img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* transform: translateX(-22%); */
+  filter: blurr(5px) ;
+}
+
+
+.main_title{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  /* text-shadow: 0 0 5px #ffa500, 
+               0 0 10px #ff8c00, 
+               0 0 20px #ff7f50, 
+               0 0 40px #ff6347, 
+               0 0 80px #ff4500, 
+               0 0 90px #ff4500, 
+               0 0 100px #ff4500, 
+               0 0 150px #ff4500; */
+  /* border: solid black 4px; */
+  text-align: center;
+}
+.main_title h1{
+  margin: 0;
+
+}
+
+
+.trainingszeiten{
+  position: absolute;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  top: 65%;
+  right: 5%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  /* background: linear-gradient(to bottom, #ff7f00, transparent); */
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+    /* border: solid black 4px; */
+  color: black;
+  padding-top: 0;
+  margin: 0;
+}
+
+.trainingszeiten h4{
+  padding: 0;
+  margin: 0.5rem;
+
+
+}
+.trainingszeiten p{
+  font-size: 1.125rem;
+  margin: 0.25rem;
+  padding: 0;
+}
+
+
+.mitglied {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 2.5%));
+  /* border: #fff solid 3px; */
+  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  border-radius: 1rem;
+  border: none;
+  /* background-color: rgb(114, 113, 113, 0.5); */
+  /* box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5); */
+  backdrop-filter: blur(5px) contrast(120%) brightness(120%);
+  background-color: rgb(255, 165, 0, 0.8);
+  color: black;
+  font-size: 1.75rem;
+  font-weight: 700;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+}
+/* .text p{
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+} */
+
+.bottom_navigation {
+  position: absolute;
+  display: none;
+  justify-content: space-between;
+  height: 3rem;
+  border: black solid 3px;
+  background-color: lightgrey;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.bottom_navigation > a{
+    border: black solid 3px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.second_vh{
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px blue;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: var(--z-index-middle-ebene);
+    padding-top: 3rem;
+}
+
+.fixed_top {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.whatIs{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  flex-direction: column;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* border: solid red 3px; */
+  width: 100%;
+  height: 10%;
+  margin: 0;
+  /* background: linear-gradient(to top, white, rgba(255, 255, 255, 0.3)); */
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.whatIs p{
+ margin: 0;
+ font-size: 1.125rem;
+}
+/* .whatIs svg{
+  margin: 0;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
